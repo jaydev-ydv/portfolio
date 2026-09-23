@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jaydev Kumar | Software Engineer &amp; Full-Stack Developer</title>
+    <meta name="description" content="Portfolio of Jaydev Kumar, a final-year Information Science &amp; Engineering student and full-stack developer building practical web and Android applications with JavaScript, React, Node.js, Java and Firebase.">
+    <meta name="theme-color" content="#f7f5f0">
+    <meta name="color-scheme" content="light dark">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Jaydev Kumar | Software Engineer &amp; Full-Stack Developer">
+    <meta property="og:description" content="Final-year Information Science &amp; Engineering student building practical web and Android applications. View projects, skills and contact details.">
+    <meta name="twitter:card" content="summary">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jaydev Kumar",
+        "jobTitle": "Software Engineer and Full-Stack Developer",
+        "description": "Final-year Information Science and Engineering student building practical web and Android applications with JavaScript, React, Node.js, Java and Firebase."
+    }
+    </script>
+
+    <!-- Sets the theme before first paint: saved choice, otherwise the system preference. Prevents a wrong-theme flash. -->
+    <script>
+        (function () {
+            var t = null;
+            try { t = localStorage.getItem("theme"); } catch (e) {}
+            if (t !== "light" && t !== "dark") {
+                t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+            }
+            document.documentElement.setAttribute("data-theme", t);
+            var m = document.querySelector('meta[name="theme-color"]');
+            if (m) m.setAttribute("content", t === "dark" ? "#08071a" : "#f7f5f0");
+        })();
+    </script>
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f5a45'/%3E%3Ctext x='32' y='42' font-size='28' font-family='Arial' font-weight='800' text-anchor='middle' fill='white'%3EJK%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Icon sprite -->
+    <svg class="sprite" aria-hidden="true" focusable="false">
+        <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+        <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+        <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+        <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+        <symbol id="i-arrow-ne" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    </svg>
+
+    <!-- Dark theme only: a quiet universe behind the page. Built by script.js, hidden in light. -->
+    <div class="cosmos" aria-hidden="true">
+        <span class="nebula nebula--a"></span>
+        <span class="nebula nebula--b"></span>
+        <span class="nebula nebula--c"></span>
+        <span class="stars stars--a" data-share="0.5"></span>
+        <span class="stars stars--b" data-share="0.3"></span>
+        <span class="stars stars--md stars--drift" data-share="0.15"></span>
+        <span class="stars stars--lg stars--a" data-share="0.05"></span>
+    </div>
+
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <nav class="container nav" aria-label="Primary">
+            <a class="brand" href="#home" aria-label="Jaydev Kumar, back to top">Jaydev Kumar</a>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#about" data-nav="about">About</a></li>
+                    <li><a href="#skills" data-nav="skills">Skills</a></li>
+                    <li><a href="#projects" data-nav="projects">Projects</a></li>
+                    <li><a href="#contact" data-nav="contact">Contact</a></li>
+                </ul>
+                <!-- Add your resume as resume.pdf next to this file. Both CV links hide themselves if it is missing. -->
+                <a class="nav-cv" href="resume.pdf" download="Jaydev-Kumar-Resume.pdf" data-resume>Download CV <svg class="ico ico-d" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
+            </div>
+
+            <div class="nav-tools">
+                <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" title="Switch theme">
+                    <svg class="ico ico-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+                    <svg class="ico ico-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+                </button>
+                <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Floating social icons: dark theme, wide screens -->
+    <nav class="float-socials" aria-label="Social links">
+        <a href="https://github.com/jaydev-ydv" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/jaydev-kumar-ise0080/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=jaydevkumaryadav4@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email (opens in a new tab)" title="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+    </nav>
+
+    <main id="main" tabindex="-1">
+
+        <!-- HERO -->
+        <section class="hero" id="home" data-spy="home" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-copy">
+                        <p class="eyebrow">Software Engineer <i>&middot;</i> Full Stack Developer</p>
+                        <h1 id="hero-title">Building software that solves <span class="accent">real problems.</span></h1>
+                        <p class="hero-lead">Final-year Information Science &amp; Engineering student building practical web and Android applications with HTML, CSS, JavaScript, React, Node.js, Java and Firebase.</p>
+                        <div class="btn-row">
+                            <a class="btn btn-primary" href="#projects">View My Work <svg class="ico ico-r" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+                            <a class="btn btn-ghost" href="resume.pdf" download="Jaydev-Kumar-Resume.pdf" data-resume>Download CV <svg class="ico ico-d" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
+                        </div>
+                        <ul class="hero-links" aria-label="Find me online">
+                            <li><a class="link-arrow" href="https://github.com/jaydev-ydv" target="_blank" rel="noopener noreferrer">GitHub <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a></li>
+                            <li><a class="link-arrow" href="https://www.linkedin.com/in/jaydev-kumar-ise0080/" target="_blank" rel="noopener noreferrer">LinkedIn <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a></li>
+                            <li><a class="link-arrow" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=jaydevkumaryadav4@gmail.com" target="_blank" rel="noopener noreferrer">Email <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="hero-visual">
+                        <figure class="portrait">
+                            <span class="sky-body moon" aria-hidden="true"></span>
+                            <span class="sky-body planet" aria-hidden="true"></span>
+                            <div class="portrait-frame">
+                                <span class="portrait-initials" aria-hidden="true">JK</span>
+                                <img src="images/profile.jpeg" alt="Portrait of Jaydev Kumar" width="800" height="1000" fetchpriority="high" decoding="async">
+                            </div>
+                            <figcaption>
+                                <strong>Jaydev Kumar</strong>
+                                <span>Final-year Information Science &amp; Engineering</span>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <dl class="hero-meta">
+                    <div class="meta-cell">
+                        <dt class="label">Education</dt>
+                        <dd>Information Science &amp; Engineering, final year</dd>
+                    </div>
+                    <div class="meta-cell">
+                        <dt class="label">Focus</dt>
+                        <dd>Web, Android, backend and UI design</dd>
+                    </div>
+                    <div class="meta-cell">
+                        <dt class="label">Status</dt>
+                        <dd><span class="pulse" aria-hidden="true"></span>Available for full-time Software Developer roles</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="section section--first" id="about" data-spy="about" aria-labelledby="about-title">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <p class="label">About</p>
+                    <h2 id="about-title">Practical software, built with care.</h2>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-copy" data-reveal>
+                        <p>I'm Jaydev Kumar, a final-year Information Science &amp; Engineering student and software developer. I enjoy building practical, real-world applications for the web and for Android.</p>
+                        <p>My interests are web development, Android development, UI design, and backend systems. I keep improving by building projects, reading other people's code, and fixing what breaks.</p>
+                    </div>
+
+                    <dl class="facts" data-reveal>
+                        <div>
+                            <dt class="label">Development approach</dt>
+                            <dd>
+                                <ul class="approach">
+                                    <li><strong>Clean Code</strong><span>Readable structure and consistent naming, so a project is easy to return to and extend.</span></li>
+                                    <li><strong>Web &amp; Android</strong><span>Comfortable across browser and mobile projects, from layout to logic.</span></li>
+                                    <li><strong>Always Learning</strong><span>Every project is a chance to try something new and fix what did not work the first time.</span></li>
+                                </ul>
+                            </dd>
+                        </div>
+                        <div>
+                            <dt class="label">Interests and focus</dt>
+                            <dd>
+                                <ul class="approach">
+                                    <li><strong>Web Development</strong><span>Building responsive pages with HTML, CSS, and JavaScript, and organizing them so they stay easy to maintain.</span></li>
+                                    <li><strong>Android Development</strong><span>Creating Java-based apps with Firebase integration, clear navigation, and screens that work well on small devices.</span></li>
+                                    <li><strong>UI Design</strong><span>Planning layouts, type, and color so an interface is easy to scan and comfortable to use.</span></li>
+                                    <li><strong>Backend Learning</strong><span>Learning how APIs, authentication, and databases fit together behind an application.</span></li>
+                                </ul>
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <!-- Counts are read from the page, so they always match. -->
+                <div class="stats" data-reveal>
+                    <div class="stat">
+                        <span class="stat-num" data-stat="projects">5</span>
+                        <span class="stat-label">Projects built</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num" data-stat="skills">33</span>
+                        <span class="stat-label">Skills and tools</span>
+                    </div>
+                    <!-- Set data-value to your real LeetCode count (for example data-value="120"). Stays hidden until then. -->
+                    <div class="stat" data-stat-optional data-value="">
+                        <span class="stat-num" data-stat="leetcode">0</span>
+                        <span class="stat-label">LeetCode problems solved</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="section" id="skills" data-spy="skills" aria-labelledby="skills-title">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <p class="label">Skills</p>
+                    <h2 id="skills-title">What I work with.</h2>
+                    <p>How my skills map to common developer roles, and the tools behind them.</p>
+                </div>
+
+                <h3 class="visually-hidden">Job details</h3>
+                <ul class="roles">
+                    <li data-reveal>
+                        <h3>Frontend Development</h3>
+                        <p>Builds responsive, accessible, and user-focused interfaces with reusable components, clear layouts, and smooth interactions across desktop and mobile devices.</p>
+                    </li>
+                    <li data-reveal>
+                        <h3>Android Development</h3>
+                        <p>Develops Android application screens and features with Java, structured navigation, Firebase integration, and user-friendly mobile experiences.</p>
+                    </li>
+                    <li data-reveal>
+                        <h3>Backend Development</h3>
+                        <p>Creates server-side logic and data workflows with Node.js, REST APIs, authentication, databases, and maintainable application structure.</p>
+                    </li>
+                    <li data-reveal>
+                        <h3>Full-Stack Developer</h3>
+                        <p>Connects frontend experiences with backend services to plan, build, test, debug, and deliver complete web applications from interface to deployment.</p>
+                    </li>
+                    <li data-reveal>
+                        <h3>UI Design</h3>
+                        <p>Designs clear and consistent digital experiences through wireframes, prototypes, visual hierarchy, typography, accessible contrast, and reusable design systems.</p>
+                    </li>
+                </ul>
+
+                <h3 class="subhead" data-reveal>Backend and system design</h3>
+                <p data-reveal>How the parts of an application fit together behind the interface.</p>
+                <ul class="roles">
+                    <li data-reveal>
+                        <h3>APIs</h3>
+                        <p>REST endpoints with authentication.</p>
+                    </li>
+                    <li data-reveal>
+                        <h3>Database engineering</h3>
+                        <p>Modeling data and querying it from server logic.</p>
+                    </li>
+                    <li data-reveal>
+                        <h3>Scalability</h3>
+                        <p>Structuring code so features can grow cleanly.</p>
+                    </li>
+                </ul>
+
+                <h3 class="subhead" data-reveal>Tech stack</h3>
+                <div class="stack" id="stack" data-reveal>
+                    <div class="stack-row">
+                        <h3>Frontend</h3>
+                        <ul class="pill-list">
+                            <li class="pill">HTML</li>
+                            <li class="pill">CSS</li>
+                            <li class="pill">JavaScript</li>
+                            <li class="pill">React</li>
+                            <li class="pill">Responsive Design</li>
+                            <li class="pill">Accessibility</li>
+                            <li class="pill">UI Components</li>
+                            <li class="pill">State Management</li>
+                        </ul>
+                    </div>
+                    <div class="stack-row">
+                        <h3>Backend</h3>
+                        <ul class="pill-list">
+                            <li class="pill">Node.js</li>
+                            <li class="pill">APIs</li>
+                            <li class="pill">REST</li>
+                            <li class="pill">Authentication</li>
+                            <li class="pill">Server Logic</li>
+                        </ul>
+                    </div>
+                    <div class="stack-row">
+                        <h3>Databases</h3>
+                        <ul class="pill-list">
+                            <li class="pill">Firebase</li>
+                            <li class="pill">Database</li>
+                            <li class="pill">Data Modeling</li>
+                        </ul>
+                    </div>
+                    <div class="stack-row">
+                        <h3>Core tools</h3>
+                        <ul class="pill-list">
+                            <li class="pill">Git</li>
+                            <li class="pill">GitHub</li>
+                            <li class="pill">Testing</li>
+                            <li class="pill">Debugging</li>
+                            <li class="pill">Deployment</li>
+                            <li class="pill">Java</li>
+                            <li class="pill">Android</li>
+                        </ul>
+                    </div>
+                    <div class="stack-row">
+                        <h3>UI design</h3>
+                        <ul class="pill-list">
+                            <li class="pill">Figma</li>
+                            <li class="pill">Layouts</li>
+                            <li class="pill">Colors</li>
+                            <li class="pill">UX</li>
+                            <li class="pill">Typography</li>
+                            <li class="pill">Wireframing</li>
+                            <li class="pill">Prototyping</li>
+                            <li class="pill">Design Systems</li>
+                            <li class="pill">Visual Hierarchy</li>
+                            <li class="pill">User Research</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section" id="projects" data-spy="projects" aria-labelledby="projects-title">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <p class="label">Projects</p>
+                    <h2 id="projects-title">Selected work.</h2>
+                    <p>Web, Android, and backend work, with the challenge each one focuses on and links to the code.</p>
+                </div>
+
+                <div class="filter-bar" role="group" aria-label="Filter projects by category">
+                    <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All</button>
+                    <button class="filter-btn" type="button" data-filter="web" aria-pressed="false">Web</button>
+                    <button class="filter-btn" type="button" data-filter="android" aria-pressed="false">Android</button>
+                    <button class="filter-btn" type="button" data-filter="backend" aria-pressed="false">Backend</button>
+                    <button class="filter-btn" type="button" data-filter="other" aria-pressed="false">Other</button>
+                </div>
+                <p class="filter-status" id="filter-status" role="status" aria-live="polite">Showing 5 projects</p>
+
+                <div class="projects">
+                    <article class="project" data-project data-category="web" data-reveal>
+                        <div class="project-top">
+                            <span class="project-cat">Full Stack Web Development</span>
+                            <span class="badge">4 technologies</span>
+                        </div>
+                        <h3>Full-Stack Web Application</h3>
+                        <p>A web application that connects a responsive interface to server-side logic and a database, from the first screen to deployment.</p>
+                        <p class="challenge"><strong>Challenge</strong>Wiring a frontend to server logic and stored data so each layer stays easy to change.</p>
+                        <ul class="tag-list" aria-label="Technologies">
+                            <li class="tag">HTML</li>
+                            <li class="tag">CSS</li>
+                            <li class="tag">JavaScript</li>
+                            <li class="tag">Node.js</li>
+                        </ul>
+                        <div class="project-links">
+                            <a class="link-arrow" href="https://github.com/jaydev-ydv/fullstack-web-project" target="_blank" rel="noopener noreferrer">GitHub <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> code for Full-Stack Web Application (opens in a new tab)</span></a>
+                            <!-- Live links hide themselves until you replace the placeholder URL -->
+                            <a class="link-arrow" href="https://YOUR-LIVE-DEMO-URL" target="_blank" rel="noopener noreferrer" data-optional>Live demo <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> of Full-Stack Web Application (opens in a new tab)</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project" data-project data-category="web" data-reveal>
+                        <div class="project-top">
+                            <span class="project-cat">Portfolio Website</span>
+                            <span class="badge">3 technologies</span>
+                        </div>
+                        <h3>Personal Portfolio</h3>
+                        <p>A responsive, accessible portfolio built with plain HTML, CSS, and JavaScript, with light and dark themes. It is the site you are viewing now.</p>
+                        <p class="challenge"><strong>Challenge</strong>Keeping one lightweight codebase responsive, accessible, and fast without a framework.</p>
+                        <ul class="tag-list" aria-label="Technologies">
+                            <li class="tag">HTML</li>
+                            <li class="tag">CSS</li>
+                            <li class="tag">JavaScript</li>
+                        </ul>
+                        <div class="project-links">
+                            <a class="link-arrow" href="https://github.com/jaydev-ydv/portfolio" target="_blank" rel="noopener noreferrer">GitHub <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> code for Personal Portfolio (opens in a new tab)</span></a>
+                            <a class="link-arrow" href="https://YOUR-LIVE-SITE-URL" target="_blank" rel="noopener noreferrer" data-optional>Live site <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> of Personal Portfolio (opens in a new tab)</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project" data-project data-category="android" data-reveal>
+                        <div class="project-top">
+                            <span class="project-cat">Android App Development</span>
+                            <span class="badge">3 technologies</span>
+                        </div>
+                        <h3>EmergencySOSApp</h3>
+                        <p>An Android app built around quick access to emergency actions, with Firebase-connected features.</p>
+                        <p class="challenge"><strong>Challenge</strong>Keeping the emergency flow fast and simple to use on a small screen.</p>
+                        <ul class="tag-list" aria-label="Technologies">
+                            <li class="tag">Java</li>
+                            <li class="tag">Android</li>
+                            <li class="tag">Firebase</li>
+                        </ul>
+                        <div class="project-links">
+                            <a class="link-arrow" href="https://github.com/jaydev-ydv/EmergencySOSApp" target="_blank" rel="noopener noreferrer">GitHub <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> code for EmergencySOSApp (opens in a new tab)</span></a>
+                            <a class="link-arrow" href="https://YOUR-LIVE-SITE-URL" target="_blank" rel="noopener noreferrer" data-optional>Live site <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> of EmergencySOSApp (opens in a new tab)</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project" data-project data-category="backend" data-reveal>
+                        <div class="project-top">
+                            <span class="project-cat">Backend Practice</span>
+                            <span class="badge">3 technologies</span>
+                        </div>
+                        <h3>Backend Practice Projects</h3>
+                        <p>Practice work on server-side logic: REST APIs, authentication, and database access.</p>
+                        <p class="challenge"><strong>Challenge</strong>Structuring routes, authentication, and data access so they stay easy to test.</p>
+                        <ul class="tag-list" aria-label="Technologies">
+                            <li class="tag">Node.js</li>
+                            <li class="tag">REST APIs</li>
+                            <li class="tag">Database</li>
+                        </ul>
+                        <div class="project-links">
+                            <a class="link-arrow" href="https://github.com/jaydev-ydv/backend-practice" target="_blank" rel="noopener noreferrer">GitHub <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> code for Backend Practice Projects (opens in a new tab)</span></a>
+                            <a class="link-arrow" href="https://YOUR-LIVE-SITE-URL" target="_blank" rel="noopener noreferrer" data-optional>Live site <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> of Backend Practice Projects (opens in a new tab)</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project" data-project data-category="other" data-reveal>
+                        <div class="project-top">
+                            <span class="project-cat">Application Projects</span>
+                            <span class="badge">2 technologies</span>
+                        </div>
+                        <h3>WordGuessGame</h3>
+                        <p>A word-guessing game focused on simple rules, clear feedback, and a clean interface.</p>
+                        <p class="challenge"><strong>Challenge</strong>Giving the player clear feedback on every guess while keeping the rules simple.</p>
+                        <ul class="tag-list" aria-label="Technologies">
+                            <li class="tag">Game logic</li>
+                            <li class="tag">UI</li>
+                        </ul>
+                        <div class="project-links">
+                            <a class="link-arrow" href="https://github.com/jaydev-ydv/WordGuessGame" target="_blank" rel="noopener noreferrer">GitHub <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> code for WordGuessGame (opens in a new tab)</span></a>
+                            <a class="link-arrow" href="https://YOUR-LIVE-SITE-URL" target="_blank" rel="noopener noreferrer" data-optional>Live site <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> of WordGuessGame (opens in a new tab)</span></a>
+                        </div>
+                    </article>
+
+                    <!-- Not counted as a project -->
+                    <article class="project" data-project data-more data-category="other" data-reveal>
+                        <div class="project-top">
+                            <span class="project-cat">GitHub Repositories</span>
+                        </div>
+                        <h3>More on GitHub</h3>
+                        <p>More code and experiments are collected on my GitHub profile.</p>
+                        <div class="project-links">
+                            <a class="link-arrow" href="https://github.com/jaydev-ydv" target="_blank" rel="noopener noreferrer">Browse repositories <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section" id="contact" data-spy="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="contact-intro" data-reveal>
+                    <p class="label">Contact</p>
+                    <h2 class="h2" id="contact-title">Let's build something useful.</h2>
+                    <p>Have a project idea, internship opportunity, job opportunity, collaboration, or simply want to talk about technology? I'd love to hear from you.</p>
+                    <a class="btn btn-primary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=jaydevkumaryadav4@gmail.com" target="_blank" rel="noopener noreferrer">Get in Touch <svg class="ico ico-r" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+                </div>
+
+                <div class="contact-grid">
+                    <div data-reveal>
+                        <h3 class="visually-hidden">Contact details</h3>
+                        <ul class="contact-rows">
+                            <li><a class="contact-row" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=jaydevkumaryadav4@gmail.com" target="_blank" rel="noopener noreferrer"><span class="label">Email</span><strong>jaydevkumaryadav4@gmail.com</strong><svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a></li>
+                            <li><a class="contact-row" href="tel:+919210333259"><span class="label">Phone</span><strong>+91&nbsp;9210333259</strong><svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg></a></li>
+                            <li><div class="contact-row"><span class="label">Location</span><strong>Bangalore, India</strong></div></li>
+                            <li><a class="contact-row" href="https://github.com/jaydev-ydv" target="_blank" rel="noopener noreferrer"><span class="label">GitHub</span><strong>jaydev-ydv</strong><svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a></li>
+                            <li><a class="contact-row" href="https://www.linkedin.com/in/jaydev-kumar-ise0080/" target="_blank" rel="noopener noreferrer"><span class="label">LinkedIn</span><strong>jaydev-kumar-ise0080</strong><svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a></li>
+                            <li><a class="contact-row" href="https://www.instagram.com/jaydev_yaduwanshi/?__pwa=1" target="_blank" rel="noopener noreferrer"><span class="label">Instagram</span><strong>jaydev_yaduwanshi</strong><svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a></li>
+                            <li><a class="contact-row" href="https://x.com/jaydevydv" target="_blank" rel="noopener noreferrer"><span class="label">X</span><strong>jaydevydv</strong><svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="form-card" data-reveal>
+                        <h3>Send a message</h3>
+                        <p>Fill in the form and your message will be prepared for your email app.</p>
+
+                        <form class="form" id="contact-form" novalidate data-mailto="jaydevkumaryadav4@gmail.com">
+                            <div class="field">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="name-error" placeholder="Your full name" maxlength="80">
+                                <p class="field-error" id="name-error" hidden></p>
+                            </div>
+                            <div class="field">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error" placeholder="you@example.com">
+                                <p class="field-error" id="email-error" hidden></p>
+                            </div>
+                            <div class="field">
+                                <label for="subject">Subject <span class="optional">(optional)</span></label>
+                                <input type="text" id="subject" name="subject" aria-describedby="subject-error" placeholder="What is this about?" maxlength="120">
+                                <p class="field-error" id="subject-error" hidden></p>
+                            </div>
+                            <div class="field">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required aria-describedby="message-error" placeholder="Tell me about your idea or opportunity" maxlength="1500"></textarea>
+                                <p class="field-error" id="message-error" hidden></p>
+                            </div>
+                            <button class="btn btn-primary" type="submit">Send Message <svg class="ico ico-r" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+                        </form>
+
+                        <div class="form-status" id="form-status" role="status" hidden>
+                            <h4 tabindex="-1"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Thanks for reaching out!</h4>
+                            <p>This site has no mail server, so nothing has been sent yet. Use the button below to send your message from your email app.</p>
+                            <div class="btn-row">
+                                <a class="btn btn-primary" id="mailto-link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=jaydevkumaryadav4@gmail.com" target="_blank" rel="noopener noreferrer">Open Gmail</a>
+                                <button class="btn btn-ghost" type="button" id="form-reset">Write another message</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-main">
+            <div class="footer-brand">
+                <strong>Jaydev Kumar</strong>
+                <span>Software Engineer / Full Stack Developer</span>
+            </div>
+            <ul class="footer-links" aria-label="Social links">
+                <li><a class="link-arrow" href="https://github.com/jaydev-ydv" target="_blank" rel="noopener noreferrer">GitHub <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a></li>
+                <li><a class="link-arrow" href="https://www.linkedin.com/in/jaydev-kumar-ise0080/" target="_blank" rel="noopener noreferrer">LinkedIn <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a></li>
+                <li><a class="link-arrow" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=jaydevkumaryadav4@gmail.com" target="_blank" rel="noopener noreferrer">Email <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a></li>
+            </ul>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; <span id="year">2026</span> Jaydev Kumar</p>
+        </div>
+    </footer>
+</body>
+</html>
