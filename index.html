@@ -337,15 +337,131 @@
 
                 <div class="filter-bar" role="group" aria-label="Filter projects by category">
                     <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All</button>
-                    <button class="filter-btn" type="button" data-filter="web" aria-pressed="false">Web</button>
-                    <button class="filter-btn" type="button" data-filter="android" aria-pressed="false">Android</button>
-                    <button class="filter-btn" type="button" data-filter="backend" aria-pressed="false">Backend</button>
+                    <button class="filter-btn" type="button" data-filter="frontend" aria-pressed="false">Frontend</button>
+                    <button class="filter-btn" type="button" data-filter="full-stack" aria-pressed="false">Full-Stack Application</button>
+                    <button class="filter-btn" type="button" data-filter="android" aria-pressed="false">Android App</button>
                     <button class="filter-btn" type="button" data-filter="other" aria-pressed="false">Other</button>
                 </div>
                 <p class="filter-status" id="filter-status" role="status" aria-live="polite">Showing 5 projects</p>
 
                 <div class="projects">
-                    <article class="project" data-project data-category="web" data-reveal>
+                    
+                    <article class="project" data-project data-category="full-stack" data-reveal>
+                        <div class="project-top">
+                            <span class="project-cat">Full-Stack Safety Reporting Platform</span>
+                            <span class="badge">8 technologies</span>
+                        </div>
+                        <h3>CampusShield</h3>
+                        <p>A safety-reporting platform for students and responders, with role-based access, private evidence uploads, and optional machine-learning triage suggestions.</p>
+                        <p class="challenge"><strong>Challenge</strong>Verifying Firebase identity tokens in the Flask API, enforcing PostgreSQL-backed roles, and securing evidence access while keeping machine-learning output advisory.</p>
+                        <ul class="tag-list" aria-label="Technologies">
+                            <li class="tag">React</li>
+                            <li class="tag">TypeScript</li>
+                            <li class="tag">Flask</li>
+                            <li class="tag">PostgreSQL</li>
+                            <li class="tag">Firebase Auth</li>
+                            <li class="tag">Cloud Storage</li>
+                            <li class="tag">Leaflet</li>
+                            <li class="tag">Scikit-learn</li>
+                        </ul>
+                        <div class="project-links">
+                            <a class="link-arrow" href="https://github.com/jaydev-ydv/campusshield" target="_blank" rel="noopener noreferrer">GitHub <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> code for CampusShield (opens in a new tab)</span></a>
+                            <!-- Live links hide themselves until you replace the placeholder URL -->
+                            <a class="link-arrow" href="https://YOUR-LIVE-DEMO-URL" target="_blank" rel="noopener noreferrer" data-optional>Live demo <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> of Full-Stack Web Application (opens in a new tab)</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project" data-project data-category="full-stack" data-reveal>
+                        <div class="project-top">
+                            <span class="project-cat">Full-Stack Workforce Management System</span>
+                            <span class="badge">8 technologies</span>
+                        </div>
+                        <h3>WorkForce Management System</h3>
+                        <p>A full-stack workforce app for managing employees, shifts, attendance, and reports, with a calendar and dashboard connected to a REST API.</p>
+                        <p class="challenge"><strong>Challenge</strong>Connecting a vanilla JavaScript frontend to an Express API while protecting routes with JWT authentication and coordinating reliable MySQL data access.</p>
+                        <ul class="tag-list" aria-label="Technologies">
+                            <li class="tag">HTML / CSS</li>
+                            <li class="tag">Vanilla JavaScript</li>
+                            <li class="tag">FullCalendar</li>
+                            <li class="tag">Chart.js</li>
+                            <li class="tag">Node.js</li>
+                            <li class="tag">Express.js</li>
+                            <li class="tag">MySQL</li>
+                            <li class="tag">JWT / bcrypt</li>
+                        </ul>
+                        <div class="project-links">
+                            <a class="link-arrow" href="https://github.com/jaydev-ydv/campusshield" target="_blank" rel="noopener noreferrer">GitHub <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> code for WorkForce Management System (opens in a new tab)</span></a>
+                            <!-- Live links hide themselves until you replace the placeholder URL -->
+                            <a class="link-arrow" href="https://workforce-management-system-puce.vercel.app/" target="_blank" rel="noopener noreferrer" data-optional>Live demo <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> of Full-Stack Web Application (opens in a new tab)</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project" data-project data-category="full-stack" data-reveal>
+                        <div class="project-top">
+                            <span class="project-cat">Full-Stack Web Application</span>
+                            <span class="badge">6 technologies</span>
+                        </div>
+                        <h3>DataFlow Business Automation and Visualization Platform</h3>
+                        <p>A full-stack data automation app for account management, file uploads, data cleaning, interactive charts, and cleaned-file downloads.</p>
+                        <p class="challenge"><strong>Challenge</strong>Connecting a Streamlit interface to a Flask API with JWT authentication while safely processing different file formats and storing results.</p>
+                        <ul class="tag-list" aria-label="Technologies">
+                            <li class="tag">Python</li>
+                            <li class="tag">Streamlit</li>
+                            <li class="tag">Flask</li>
+                            <li class="tag">Pandas</li>
+                            <li class="tag">Plotly</li>
+                            <li class="tag">SQLite / PostgreSQL</li>
+                        </ul>
+                        <div class="project-links">
+                            <a class="link-arrow" href="https://github.com/jaydev-ydv/DataFlow_Business_Automation" target="_blank" rel="noopener noreferrer">GitHub <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> code for Full-Stack Web Application (opens in a new tab)</span></a>
+                            <!-- Live links hide themselves until you replace the placeholder URL -->
+                            <a class="link-arrow" href="https://YOUR-LIVE-DEMO-URL" target="_blank" rel="noopener noreferrer" data-optional>Live demo <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> of Full-Stack Web Application (opens in a new tab)</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project" data-project data-category="frontend" data-reveal>
+                        <div class="project-top">
+                            <span class="project-cat">Stone-Paper-Scissors Game</span>
+                            <span class="badge">3 technologies</span>
+                        </div>
+                        <h3>Stone-Paper-Scissors Game</h3>
+                        <p>A browser-based Stone-Paper-Scissors game where players choose a move and play against the computer.</p>
+                        <p class="challenge"><strong>Challenge</strong>Implementing the game rules, generating the computer's move, and clearly showing each round's result.</p>
+                        <ul class="tag-list" aria-label="Technologies">
+                            <li class="tag">HTML</li>
+                            <li class="tag">CSS</li>
+                            <li class="tag">JavaScript</li>
+                           
+                        </ul>
+                        <div class="project-links">
+                            <a class="link-arrow" href="https://github.com/jaydev-ydv/Stone_Paper_Scissors_Game" target="_blank" rel="noopener noreferrer">GitHub <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> code for Full-Stack Web Application (opens in a new tab)</span></a>
+                            <!-- Live links hide themselves until you replace the placeholder URL -->
+                            <a class="link-arrow" href="https://rockpaperscissorsgamewebpage.netlify.app/" target="_blank" rel="noopener noreferrer" data-optional>Live demo <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> of Full-Stack Web Application (opens in a new tab)</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project" data-project data-category="frontend" data-reveal>
+                        <div class="project-top">
+                            <span class="project-cat">Calculator</span>
+                            <span class="badge">3 technologies</span>
+                        </div>
+                        <h3>Calculator</h3>
+                        <p>A responsive browser-based calculator for performing everyday arithmetic with a clear, easy-to-use interface.</p>
+                        <p class="challenge"><strong>Challenge</strong>Handling user input and calculation logic accurately while keeping the interface clear across screen sizes.</p>
+                        <ul class="tag-list" aria-label="Technologies">
+                            <li class="tag">HTML</li>
+                            <li class="tag">CSS</li>
+                            <li class="tag">JavaScript</li>
+                           
+                        </ul>
+                        <div class="project-links">
+                            <a class="link-arrow" href="https://github.com/jaydev-ydv/Calculator" target="_blank" rel="noopener noreferrer">GitHub <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> code for Full-Stack Web Application (opens in a new tab)</span></a>
+                            <!-- Live links hide themselves until you replace the placeholder URL -->
+                            <a class="link-arrow" href="https://jaydev-ydv.github.io/Calculator/" target="_blank" rel="noopener noreferrer" data-optional>Live demo <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> of Full-Stack Web Application (opens in a new tab)</span></a>
+                        </div>
+                    </article>
+
+                    <article class="project" data-project data-category="full-stack" data-reveal>
                         <div class="project-top">
                             <span class="project-cat">Full Stack Web Development</span>
                             <span class="badge">4 technologies</span>
@@ -366,7 +482,7 @@
                         </div>
                     </article>
 
-                    <article class="project" data-project data-category="web" data-reveal>
+                    <article class="project" data-project data-category="other" data-reveal>
                         <div class="project-top">
                             <span class="project-cat">Portfolio Website</span>
                             <span class="badge">3 technologies</span>
@@ -381,7 +497,7 @@
                         </ul>
                         <div class="project-links">
                             <a class="link-arrow" href="https://github.com/jaydev-ydv/portfolio" target="_blank" rel="noopener noreferrer">GitHub <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> code for Personal Portfolio (opens in a new tab)</span></a>
-                            <a class="link-arrow" href="https://YOUR-LIVE-SITE-URL" target="_blank" rel="noopener noreferrer" data-optional>Live site <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> of Personal Portfolio (opens in a new tab)</span></a>
+                            <a class="link-arrow" href="https://jaydev-ydv.github.io/portfolio/" target="_blank" rel="noopener noreferrer" data-optional>Live site <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> of Personal Portfolio (opens in a new tab)</span></a>
                         </div>
                     </article>
 
@@ -403,8 +519,26 @@
                             <a class="link-arrow" href="https://YOUR-LIVE-SITE-URL" target="_blank" rel="noopener noreferrer" data-optional>Live site <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> of EmergencySOSApp (opens in a new tab)</span></a>
                         </div>
                     </article>
+                    <article class="project" data-project data-category="other" data-reveal>
+                        <div class="project-top">
+                            <span class="project-cat">Telegram Chat Bot</span>
+                            <span class="badge">3 technologies</span>
+                        </div>
+                        <h3>Telegram Chat Bot</h3>
+                        <p>A Python-powered Telegram bot that processes chat messages and uses a Google API to generate useful responses.</p>
+                        <p class="challenge"><strong>Challenge</strong>Handling Telegram updates reliably, protecting the Google API key, and returning clear responses to users.</p>
+                        <ul class="tag-list" aria-label="Technologies">
+                            <li class="tag">Python</li>
+                            <li class="tag">Telegram Bot API</li>
+                            <li class="tag">Google API</li>
+                        </ul>
+                        <div class="project-links">
+                            <a class="link-arrow" href="https://github.com/jaydev-ydv/telegram_chatbot" target="_blank" rel="noopener noreferrer">GitHub <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> code for Backend Practice Projects (opens in a new tab)</span></a>
+                            <a class="link-arrow" href="https://YOUR-LIVE-SITE-URL" target="_blank" rel="noopener noreferrer" data-optional>Live site <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> of Backend Practice Projects (opens in a new tab)</span></a>
+                        </div>
+                    </article>
 
-                    <article class="project" data-project data-category="backend" data-reveal>
+                        <article class="project" data-project data-category="other" data-reveal>
                         <div class="project-top">
                             <span class="project-cat">Backend Practice</span>
                             <span class="badge">3 technologies</span>
@@ -423,9 +557,9 @@
                         </div>
                     </article>
 
-                    <article class="project" data-project data-category="other" data-reveal>
+                    <article class="project" data-project data-category="android" data-reveal>
                         <div class="project-top">
-                            <span class="project-cat">Application Projects</span>
+                            <span class="project-cat">Android Game Development</span>
                             <span class="badge">2 technologies</span>
                         </div>
                         <h3>WordGuessGame</h3>
@@ -433,7 +567,9 @@
                         <p class="challenge"><strong>Challenge</strong>Giving the player clear feedback on every guess while keeping the rules simple.</p>
                         <ul class="tag-list" aria-label="Technologies">
                             <li class="tag">Game logic</li>
-                            <li class="tag">UI</li>
+                            <li class="tag">Java</li>
+                            <li class="tag">Android</li>
+                            <li class="tag">Firebase</li>
                         </ul>
                         <div class="project-links">
                             <a class="link-arrow" href="https://github.com/jaydev-ydv/WordGuessGame" target="_blank" rel="noopener noreferrer">GitHub <svg class="ico" aria-hidden="true"><use href="#i-arrow-ne"/></svg><span class="visually-hidden"> code for WordGuessGame (opens in a new tab)</span></a>
